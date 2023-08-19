@@ -1,0 +1,1 @@
+# kawpow-coins-mining-pool
