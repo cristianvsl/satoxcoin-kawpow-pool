@@ -1,0 +1,232 @@
+<div class="row">&nbsp;</div>
+<div class="container">
+	<div class="slim-pageheader-left">
+		<h6 class="slim-pagetitle">
+			<span class="tx-mov">News</span>
+		</h6>
+	</div>
+	<div class="row">&nbsp;</div>
+	<div class="container col-sm-12 col-md-12 pl-0">
+		<center>
+		  <ul class="list-group shadow">
+		    <li class="list-group-item border-danger">
+			  <span class="strong tx-mov-mic"><img src="/static/icons/{{=String(it.stats.coin)}}.png" width="24px;" height="24px;" alt="Coin Logo">&nbsp;&nbsp;GET STARTED:&nbsp;&nbsp;<span class="tx-danger">Use TrexMiner. Pool stratum: stratum+tcp://satox.miningpub.co.uk:18008( for small rigs [1-2-3 GPU's] or stratum+tcp://satox.miningpub.co.uk.com:18009(for rigs with 8+ GPU`s). NICEHASH port coming soon!</span>
+			</li>
+		  </ul>
+		</center>
+	</div>
+	<div class="container col-sm-12 col-md-12 pl-0">
+		<center>
+		  <ul class="list-group shadow">
+
+		  </ul>
+		</center>
+	</div>
+	<div class="row">&nbsp;</div>
+</div>
+<div class="row">&nbsp;</div>
+<div class="container">
+	<div class="slim-pageheader-left">
+		<h6 class="slim-pagetitle">
+			<span class="tx-mov">POOL INFO</span>
+		</h6>
+	</div>
+	<br>
+	{{ for(var pool in it.stats.pools) { }}
+		{{ if(pool !== it.stats.coin) continue; }}
+		<ul class="list-group col-sm-12 col-md-12 col-lg-12">
+			<li class="list-group-item border-gray-400 bg-gray-300"><center><span class="tx-mov">POOL HASHRATE&nbsp;&nbsp;{{=it.stats.pools[pool].hashrateString}}&nbsp;&nbsp;(<span id="netPercent">{{=Number((it.stats.pools[pool].hashrate) / (it.stats.pools[pool].poolStats.networkSols)).toFixed(2)}} %)</span></center></li>
+			<li class="list-group-item border-gray-400 pl-2 pr-2 pt-2 pb-2 shadow"><canvas id="poolHashrateChart"></canvas></li>
+		</ul>
+		</br>
+		<ul class="list-group col-sm-12 col-md-6 float-left">
+			<li class="list-group-item border-gray-400 bg-gray-300"><center><span class="tx-mov">NETWORK DIFFICULTY&nbsp;&nbsp;{{=it.stats.pools[pool].networkDifficultyString}}</span></center></li>
+			<li class="list-group-item border-gray-400 pl-2 pr-2 pt-2 pb-2 shadow"><canvas id="networkDifficultyChart"></canvas></li>
+		</ul>
+		<ul class="list-group col-sm-12 col-md-6 float-right">
+			<li class="list-group-item border-gray-400 bg-gray-300"><center><span class="tx-mov">{{=it.stats.pools[pool].minerCount}}&nbsp;&nbsp;MINERS / {{=it.stats.pools[pool].workerCount}}&nbsp;&nbsp;WORKERS</span></center></li>
+			<li class="list-group-item border-gray-400 pl-2 pr-2 pt-2 pb-2 shadow"><canvas id="poolWorkerChart"></canvas></li>
+		</ul>
+		</br>
+&nbsp;
+<div class="container pl-0 pr-3">
+	<ul class="list-group no-gutters shadow">
+		<li class="list-group-item border-gray-400 bg-gray-300"><center><span class="tx-mov">INFO</span></center></li>
+	    <li class="list-group-item">
+			<div class="row no-gutters">
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>				
+						<h3>
+							<span id="timeToFind" class="text-primary">{{=it.stats.pools[pool].timeToFind}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>TIME TO FIND A BLOCK</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">	
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>				
+						<h3>
+							<span id="validShares" class="text-primary">{{=it.stats.pools[pool].poolStats.validShares}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>VALID SHARES</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>						
+						<h3>
+							<span class="coin__price text-primary">$--</span>
+						</h3>
+						<label class="tx-mov-mic"><u>SATOX PRICE</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>					
+						<h3>
+							<span id="currentEffort" class="text-primary">{{=Number(it.stats.pools[pool].currEffort * 100).toFixed(2)}} %</span>
+						</h3>
+						<label class="tx-mov-mic"><u>CURRENT EFFORT</u></label>
+					</div>
+				</div>
+			</div>
+		</li>
+	    <li class="list-group-item border-gray-400">
+			<div class="row no-gutters">
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>						
+						<h3>
+							<span id="netHash" class="text-primary">{{=it.stats.pools[pool].poolStats.networkSolsString}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>NETWORK HASHRATE</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>						
+						<h3>
+							<span id="netDiff" class="text-primary">{{=it.stats.pools[pool].networkDifficultyString}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>NETWORK DIFFICULTY</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>						
+						<h3>
+							<span id="netHeight" class="text-primary">{{=it.stats.pools[pool].poolStats.networkBlocks}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>BLOCKCHAIN HEIGHT</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>						
+						<h3>
+							<span id="netPeers" class="text-primary">{{=it.stats.pools[pool].poolStats.networkConnections}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>CONNECTED PEERS</u></label>
+					</div>
+				</div>
+			</div>
+		</li>
+	    <li class="list-group-item border-gray-400">
+			<div class="row no-gutters">
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>
+						<h3>
+						{{ var total = 0.0; }}
+						{{ var rewardRecipients = it.stats.pools[pool].rewardRecipients || {}; }}
+						{{ for (var r in rewardRecipients) { }}
+							{{ total += rewardRecipients[r]; }}
+						{{ } }}
+							<span class="text-primary">{{=total}} %</span>
+						</h3>
+						<label class="tx-mov-mic"><u>POOL FEE</u></label>											
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>						
+						<h3>
+							<span id="minPayment" class="text-primary">{{=it.stats.pools[pool].minimumPayment}} {{=it.stats.pools[pool].symbol}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>MINIMUM PAYOUT</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">
+						</div>						
+						<h3>
+							<span id="intPayment" class="text-primary">{{=it.stats.pools[pool].intervalPayment}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>PAYMENT INTERVAL</u></label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 ccol-lg-3">
+					<div class="dash-content dash-small-info">
+						<div class="icon icon-info">						
+						</div>					
+						<h3>
+							<span id="lastReward" class="text-primary">{{=Number(it.stats.pools[pool].poolStats.networkReward / 100000000).toFixed(2) + " " + it.stats.pools[pool].symbol}}</span>
+						</h3>
+						<label class="tx-mov-mic"><u>LAST BLOCK REWARD</u></label>
+					</div>
+				</div>
+			</div>
+		{{ break; }}
+	{{ } }}
+	    </li>
+	</ul>
+</div>
+<div class="row">&nbsp;</div>
+<script>
+	// Change the UUID to the coin you want to fetch
+	const uuid = 'SzGeLUPZI';
+
+	const options = {
+		headers: {
+		'Content-Type': 'application/json',
+		// Uncomment the next line and replace your-access-token-here with you own API key
+		'x-access-token': 'coinranking65f48988794430e62a58fb9ac9160e275b486c573fa3645d',
+		},
+	};
+
+	const priceFormatter = new Intl.NumberFormat('en-US', {
+		style: 'currency',
+		currency: 'USD',
+		minimumFractionDigits: 4,
+	});
+
+	const renderCoin = (coin) => {
+		// Select the HTML elements
+		const priceElement = document.querySelector('.coin__price');
+
+		// Render the values into the HTML
+		priceElement.innerText = priceFormatter.format(coin.price);
+		priceElement.innerText = priceFormatter.format(coin.price);
+	};
+
+fetch(`https://api.coinranking.com/v2/coin/${uuid}`)
+  .then((response) => response.json())
+  .then((result) => renderCoin(result.data.coin));
+
+	var poolName = "{{=it.stats.coin}}";
+	document.querySelector('main').appendChild(document.createElement('script')).src = '/static/stat_tracker.js';
+	document.querySelector('main').appendChild(document.createElement('script')).src = '/static/methods.js';
+	document.querySelector('main').appendChild(document.createElement('script')).src = '/static/pool_stats.js';
+</script>

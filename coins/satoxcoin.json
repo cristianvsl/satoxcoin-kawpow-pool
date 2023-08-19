@@ -1,0 +1,16 @@
+{
+    "name": "satoxcoin",    
+    "symbol": "SATOX",    
+    "algorithm": "kawpow",
+    
+    "wallet": "https://github.com/satoverse/satoxcoin/releases",
+
+    "explorer":"https://xplore.satoverse.io/",
+    
+    "explorerGetBlockJSON": "https://xplore.satoverse.io/api/getrawtransaction?txid=",
+    "explorerGetBlock": "https://xplore.satoverse.io/block/",
+    "explorerGetTX": "https://xplore.satoverse.io/tx/",
+    
+    "blockTime": 60,
+    "blockChange": 1   
+}
