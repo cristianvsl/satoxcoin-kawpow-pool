@@ -493,6 +493,10 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bas
 
 $ nvm install 12.22.12  -  [This will install the nodejs v12.22.12. If you need to see a list of other versions of node, type: "nvm ls-remote"]
 
+# Installing redis-server
+
+$ sudo apt install redis-server
+
 <b>Now. Make sure you are in the /kawpow-mining-pool/ directory</b>
 
 $ nano config.json  
