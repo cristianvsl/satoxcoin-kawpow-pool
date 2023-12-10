@@ -46,7 +46,7 @@ $ sudo chmod +x share/genbuild.sh
 
 $ contrib/install_db4.sh ../
 
-$wget https://gist.githubusercontent.com/darosior/a5d93c6245a32f7a8bed2ac4e33a0011/raw/89c49515febbd55ffb60e4add9d08f299862cde4/install_libdb4.8.sh
+$ wget https://gist.githubusercontent.com/darosior/a5d93c6245a32f7a8bed2ac4e33a0011/raw/89c49515febbd55ffb60e4add9d08f299862cde4/install_libdb4.8.sh
 
 $ sudo chmod +x install_libdb4.8.sh
 
