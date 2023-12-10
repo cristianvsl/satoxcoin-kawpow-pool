@@ -485,9 +485,15 @@ $ git clone https://github.com/cristianvsl/kawpow-coins-mining-pool.git
 
 $ cd kawpow-coins-mining-pool
 
-<b> You`ll need NodeJS v12.22.12. You can installit via NVM (Node Version Manager)</b>
+<b> You`ll need NodeJS v12.22.12. You can install it via NVM (Node Version Manager)</b>
 
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash  -  [After installation is complete, close and reopen your terminal]
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash  -
+
+$ export NVM_DIR="$HOME/.nvm"
+
+$ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+$ [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 <b>As the Node Version Manager is now installed, we can proceed with the nodejs installation</b>
 
