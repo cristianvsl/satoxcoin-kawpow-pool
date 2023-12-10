@@ -89,7 +89,7 @@ Next, make sure you are in your $HOME directory. If you are not sure just type c
 
 $ mkdir .satoxcoin
 
-$ cd satoxcoin
+$ cd .satoxcoin
 
 # Create the config file for the node
 
