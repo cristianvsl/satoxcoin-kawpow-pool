@@ -14,8 +14,11 @@
 <b>If you are under "root" user:</b>
 
 adduser pool
+
 usermod -aG sudo pool
+
 su - pool
+
 sudo apt update && sudo apt upgrade -y
 
 # Cloning
