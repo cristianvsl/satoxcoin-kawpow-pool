@@ -372,7 +372,7 @@ $ satoxcoin-cli getnetworkinfo
 
 $ satoxcoin-cli getblockchaininfo
 
-<b>Here are more commands to help you work with ravend with descriptions:</b>
+<b>Here are more commands to help you work with satoxcoin with descriptions:</b>
 
 # Blockchain Commands:
 
