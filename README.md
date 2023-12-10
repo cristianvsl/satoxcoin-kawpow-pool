@@ -73,7 +73,7 @@ $ sudo make install
 
 <b>Type cd to move to your $HOME directory</b>
 
-$ python3 ~/src/Ravencoin/share/rpcuser/rpcuser.py $USER  -  [ Change $USER with any username you`d like to use as login credentials for the node. This credentials will be later used when building the mining pool for Satoxcoin]
+$ python3 ~/src/satoxcoin/share/rpcuser/rpcuser.py $USER  -  [ Change $USER with any username you`d like to use as login credentials for the node. This credentials will be later used when building the mining pool for Satoxcoin]
 
 The above command will spit out something like this:
 
