@@ -102,7 +102,8 @@ $ nano satoxcoin.conf
 
 #Your address to receive any tokens - change to yours
 
-miningaddress=YOURWALLET  -  [This can be generated later after the node is synced with the following command: satoxcoin-cli getnewaddress]
+miningaddress=YOURWALLET
+#[This can be generated later after the node is synced with the following command: satoxcoin-cli getnewaddress]
 
 #add a comment to your node info - PUT IN YOUR wallet address
 
