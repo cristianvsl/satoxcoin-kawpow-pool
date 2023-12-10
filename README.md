@@ -19,7 +19,7 @@ $ usermod -aG sudo pool
 
 $ su - pool
 
-$sudo apt update && sudo apt upgrade -y
+$ sudo apt update && sudo apt upgrade -y
 
 # Cloning
 
