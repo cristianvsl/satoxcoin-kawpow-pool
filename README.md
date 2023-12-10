@@ -560,7 +560,7 @@ $ node init.js or node ./init.js
 
 <b>If you need to run as super user (eg. when you implement SSL)</b>
 
-$ sudo /home/$USER/.nvm/node/versions/v12.22.12/bin/node init.js  -  [Check exaclty the full path for your nodejs version under .nvm to be sure]
+$ sudo /home/$USER/.nvm/versions/node/v12.22.12/bin/node ./init.js  -  [Check exaclty the full path for your nodejs version under .nvm to be sure]
 
 If everything went smooth, now you should have Satoxcoin Node up and running as well as the pool and website.
 
