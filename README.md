@@ -1,6 +1,8 @@
 # kawpow-coins-mining-pool
 
 <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://raw.githubusercontent.com/cristianvsl/satoxcoin-kawpow-pool/f7cd8d0bd1dd4e1b4c8acacaa66ed3e88e880c4c/Screenshot%202023-12-13%20182839.png" width="725" height="533">
+<br>
+<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://raw.githubusercontent.com/cristianvsl/satoxcoin-kawpow-pool/f7cd8d0bd1dd4e1b4c8acacaa66ed3e88e880c4c/pool-dashboard.png" width="725" height="544">
 
 <br>
 
