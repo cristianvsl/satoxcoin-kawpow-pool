@@ -1,12 +1,9 @@
 # kawpow-coins-mining-pool
 
-![frontend](https://github.com/cristianvsl/kawpow-coins-mining-pool/assets/74607759/08e99225-a5bf-47c0-9ad0-305ba4f8fdf0)
+![frontend]([https://github.com/cristianvsl/kawpow-coins-mining-pool/assets/74607759/08e99225-a5bf-47c0-9ad0-305ba4f8fdf0](https://raw.githubusercontent.com/cristianvsl/satoxcoin-kawpow-pool/f7cd8d0bd1dd4e1b4c8acacaa66ed3e88e880c4c/pool-dashboard.png))
 <br>
-![get-started](https://github.com/cristianvsl/kawpow-coins-mining-pool/assets/74607759/220b2475-263d-4b15-85b1-568135b1ea4b)
-<br>
-![pool-blocks](https://github.com/cristianvsl/kawpow-coins-mining-pool/assets/74607759/8e3bb090-2732-4093-b5da-7a48e2a4d7a7)
-<br>
-![pool-payments](https://github.com/cristianvsl/kawpow-coins-mining-pool/assets/74607759/52e13402-39a5-4953-ae08-53f7e7e4ddf0)
+![get-started]([https://github.com/cristianvsl/kawpow-coins-mining-pool/assets/74607759/220b2475-263d-4b15-85b1-568135b1ea4b](https://github.com/cristianvsl/satoxcoin-kawpow-pool/blob/f7cd8d0bd1dd4e1b4c8acacaa66ed3e88e880c4c/Screenshot%202023-12-13%20182839.png?raw=true))
+
 <br>
 
 # Using Ubuntu 22.04 LTS
